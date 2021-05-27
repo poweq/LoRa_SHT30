@@ -1,8 +1,6 @@
-cmwx1zzabz_0xx/exe/sys_sensors.o: ..\Core\Src\sys_sensors.c \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\Core\Inc\sys_conf.h \
-  ..\Core\Inc\sys_sensors.h ..\Core\Inc\sht3x.h \
+cmwx1zzabz_0xx/exe/sht3x.o: ..\Core\Src\sht3x.c ..\Core\Inc\sht3x.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h ..\Core\Inc\sys_app.h \
-  ..\Core\Inc\sys_conf.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\Core\Inc\sys_conf.h \
   ..\..\..\..\..\..\Utilities\trace\adv_trace\stm32_adv_trace.h \
   ..\Core\Inc\utilities_conf.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h \
@@ -47,4 +45,5 @@ cmwx1zzabz_0xx/exe/sys_sensors.o: ..\Core\Src\sys_sensors.c \
   ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim.h \
   ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim_ex.h \
   ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart.h \
-  ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h
+  ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\assert.h ..\Core\Inc\sys_app.h

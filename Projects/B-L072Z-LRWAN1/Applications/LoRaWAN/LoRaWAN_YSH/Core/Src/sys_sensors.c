@@ -127,7 +127,9 @@ void EnvSensors_Read(sensor_t *sensor_data)
   sensor_data->latitude  = (int32_t)((STSOP_LATTITUDE  * MAX_GPS_POS) / 90);
   sensor_data->longitude = (int32_t)((STSOP_LONGITUDE  * MAX_GPS_POS) / 180);
   /* USER CODE BEGIN EnvSensors_Read_Last */
+  #if defined (SHT_30_ENABLED) && (SHT_30_ENABLED == 1)
 
+  #endif
   /* USER CODE END EnvSensors_Read_Last */
 }
 

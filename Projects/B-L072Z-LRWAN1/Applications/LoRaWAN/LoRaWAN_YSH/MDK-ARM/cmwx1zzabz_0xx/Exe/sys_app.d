@@ -62,4 +62,5 @@ cmwx1zzabz_0xx/exe/sys_app.o: ..\Core\Src\sys_app.c \
   ..\..\..\..\..\..\Utilities\misc\stm32_systime.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\time.h \
   ..\..\..\..\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.h \
-  ..\Core\Inc\rtc_if.h ..\..\..\..\..\..\Utilities\timer\stm32_timer.h
+  ..\Core\Inc\rtc_if.h ..\..\..\..\..\..\Utilities\timer\stm32_timer.h \
+  ..\Core\Inc\i2c.h ..\Core\Inc\sht3x.h ..\Core\Inc\sys_app.h

@@ -21,6 +21,8 @@
 "cmwx1zzabz_0xx\exe\usart_if.o"
 "cmwx1zzabz_0xx\exe\sys_sensors.o"
 "cmwx1zzabz_0xx\exe\ds18b20.o"
+"cmwx1zzabz_0xx\exe\i2c.o"
+"cmwx1zzabz_0xx\exe\sht3x.o"
 "cmwx1zzabz_0xx\exe\startup_stm32l072xx.o"
 "cmwx1zzabz_0xx\exe\b_l072z_lrwan1_bus.o"
 "cmwx1zzabz_0xx\exe\b-l072z-lrwan1.o"

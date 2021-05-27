@@ -61,6 +61,8 @@ extern "C" {
 
 /* USER CODE BEGIN EC */
 #define SENSOR_ENABLED  0
+
+#define SHT_30_ENABLED  1
 /* USER CODE END EC */
 
 /* External variables --------------------------------------------------------*/

@@ -38,4 +38,4 @@ cmwx1zzabz_0xx/exe/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim_ex.h \
   ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart.h \
   ..\..\..\..\..\..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h \
-  ..\LoRaWAN\App\app_lorawan.h ..\Core\Inc\DS18B20.h
+  ..\LoRaWAN\App\app_lorawan.h

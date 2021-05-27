@@ -498,6 +498,16 @@
               <FileType>1</FileType>
               <FilePath>..\Core\Src\DS18B20.c</FilePath>
             </File>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>sht3x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\sht3x.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -31,12 +31,13 @@
 #include "rtc_if.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "i2c.h"
+#include "sht3x.h"
 /* USER CODE END Includes */
 
 /* External variables ---------------------------------------------------------*/
 /* USER CODE BEGIN EV */
-
+extern I2C_HandleTypeDef hi2c1;
 /* USER CODE END EV */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,6 +97,12 @@ static void tiny_snprintf_like(char *buf, uint32_t maxsize, const char *strForma
 void SystemApp_Init(void)
 {
   /* USER CODE BEGIN SystemApp_Init_1 */
+		sht3x_handle_t i2c_handle ={
+	.i2c_handle = &hi2c1,
+	.device_address= SHT3X_I2C_DEVICE_ADDRESS_ADDR_PIN_LOW
+	};
+		
+
 
   /* USER CODE END SystemApp_Init_1 */
 
@@ -132,6 +139,19 @@ void SystemApp_Init(void)
 #error LOW_POWER_DISABLE not defined
 #endif /* LOW_POWER_DISABLE */
   /* USER CODE BEGIN SystemApp_Init_2 */
+	/*Init i2c1*/
+	  MX_I2C1_Init();
+ if( sht3x_init(&i2c_handle)==true)
+ {
+   APP_PRINTF("connect i2c \n\r");
+ }
+ else
+ {
+	 APP_PRINTF("not connect i2c \n\r");
+ }
+ 
+
+	RUN_SHT_30(&i2c_handle);
 
   /* USER CODE END SystemApp_Init_2 */
 }
@@ -177,7 +197,7 @@ uint8_t GetBatteryLevel(void)
     batteryLevel = (((uint32_t)(batteryLevelmV - VDD_MIN) * LORAWAN_MAX_BAT) / (VDD_BAT - VDD_MIN));
   }
 
-  APP_LOG(TS_ON, VLEVEL_M, "VDDA= %d\r\n", batteryLevel);
+ // APP_LOG(TS_ON, VLEVEL_M, "VDDA= %d\r\n", batteryLevel);
 
   /* USER CODE BEGIN GetBatteryLevel_2 */
 

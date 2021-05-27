@@ -3,7 +3,12 @@
         "sys_conf.h": "c",
         "sys_sensors.h": "c",
         "main.h": "c",
-        "app_lorawan.h": "c"
+        "app_lorawan.h": "c",
+        "stm32l0xx_hal.h": "c",
+        "stm32l0xx_hal_conf.h": "c",
+        "sys_app.h": "c",
+        "lora_app.h": "c",
+        "platform.h": "c"
     },
     "git.ignoreLimitWarning": true
 }

@@ -77,7 +77,8 @@ cmwx1zzabz_0xx/exe/lora_app.o: ..\LoRaWAN\App\lora_app.c \
   ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandlerTypes.h \
   ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassB.h \
   ..\LoRaWAN\App\lora_command.h ..\LoRaWAN\App\lora_at.h \
-  ..\Core\Inc\sys_sensors.h ..\Core\Inc\sys_conf.h \
+  ..\Core\Inc\sys_sensors.h ..\Core\Inc\sht3x.h ..\Core\Inc\sys_app.h \
+  ..\Core\Inc\sys_conf.h \
   ..\..\..\..\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.h \
   ..\Core\Inc\adc_if.h ..\Core\Inc\adc.h ..\Core\Inc\platform.h \
-  ..\LoRaWAN\App\CayenneLpp.h
+  ..\LoRaWAN\App\CayenneLpp.h ..\Core\Inc\sht3x.h

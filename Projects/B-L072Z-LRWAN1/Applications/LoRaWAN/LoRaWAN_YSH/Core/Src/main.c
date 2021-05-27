@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "DS18B20.h"
+//#include "DS18B20.h"
+//#include "i2c.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,7 +34,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define APP_TX_DUTYCYCLE      10000
+#define APP_TX_DUTYCYCLE      100000
 
 /* USER CODE END PD */
 
@@ -90,7 +91,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_LoRaWAN_Init();
   /* USER CODE BEGIN 2 */
-
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -40,6 +40,7 @@
 #include "adc_if.h"
 #include "sys_conf.h"
 #include "CayenneLpp.h"
+#include "sht3x.h"
 /* USER CODE END Includes */
 
 /* External variables ---------------------------------------------------------*/
@@ -71,7 +72,7 @@ typedef enum TxEventType_e
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+extern I2C_HandleTypeDef hi2c1;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -319,6 +320,8 @@ static void SendTxData(void)
   sensor_t sensor_data;
   UTIL_TIMER_Time_t nextTxIn = 0;
 
+  sht3x_value_t sht_val;
+
 #ifdef CAYENNE_LPP
   uint8_t channel = 0;
 #else
@@ -329,6 +332,20 @@ static void SendTxData(void)
   uint16_t altitudeGps = 0;
 #endif /* CAYENNE_LPP */
   /* USER CODE BEGIN SendTxData_1 */
+
+		/*init i2c1 handler*/
+  	sht3x_handle_t i2c_handle ={
+	.i2c_handle = &hi2c1,
+	.device_address= SHT3X_I2C_DEVICE_ADDRESS_ADDR_PIN_LOW
+	};
+	/*end init handler*/
+	
+  int8_t SHT30_TEMP_H=0;
+  int8_t SHT30_TEMP_L=0;
+  int8_t SHT30_HUM_H=0;
+  int8_t SHT30_HUM_L=0;
+
+  
 
   /* USER CODE END SendTxData_1 */
 
@@ -361,14 +378,14 @@ static void SendTxData(void)
 #else  /* not CAYENNE_LPP */
 
   humidity    = (uint16_t)(sensor_data.humidity * 10);            /* in %*10     */
-
+/*
   AppData.Buffer[i++] = AppLedStateOn;
   AppData.Buffer[i++] = (uint8_t)((pressure >> 8) & 0xFF);
   AppData.Buffer[i++] = (uint8_t)(pressure & 0xFF);
   AppData.Buffer[i++] = (uint8_t)(temperature & 0xFF);
   AppData.Buffer[i++] = (uint8_t)((humidity >> 8) & 0xFF);
   AppData.Buffer[i++] = (uint8_t)(humidity & 0xFF);
-
+*/
   if ((LmHandlerParams.ActiveRegion == LORAMAC_REGION_US915) || (LmHandlerParams.ActiveRegion == LORAMAC_REGION_AU915)
       || (LmHandlerParams.ActiveRegion == LORAMAC_REGION_AS923))
   {
@@ -382,7 +399,8 @@ static void SendTxData(void)
     latitude = sensor_data.latitude;
     longitude = sensor_data.longitude;
 
-    AppData.Buffer[i++] = GetBatteryLevel();        /* 1 (very low) to 254 (fully charged) */
+   // AppData.Buffer[i++] = GetBatteryLevel();        /* 1 (very low) to 254 (fully charged) */
+    /*
     AppData.Buffer[i++] = (uint8_t)((latitude >> 16) & 0xFF);
     AppData.Buffer[i++] = (uint8_t)((latitude >> 8) & 0xFF);
     AppData.Buffer[i++] = (uint8_t)(latitude & 0xFF);
@@ -391,6 +409,25 @@ static void SendTxData(void)
     AppData.Buffer[i++] = (uint8_t)(longitude & 0xFF);
     AppData.Buffer[i++] = (uint8_t)((altitudeGps >> 8) & 0xFF);
     AppData.Buffer[i++] = (uint8_t)(altitudeGps & 0xFF);
+    */
+    //sht30
+
+    if(LoRa_sht3x_read_temperature_and_humidity(&i2c_handle,&sht_val)==true)
+    {
+
+      AppData.Buffer[i++] =  (uint8_t)(sht_val.SHT_30_Temperature_H&0xff) ; 
+      AppData.Buffer[i++] = (uint8_t)( sht_val.SHT_30_Temperature_L& 0xFF);
+      AppData.Buffer[i++] = (uint8_t)( sht_val.SHT_30_Humidity_H& 0xFF);
+      AppData.Buffer[i++] = (uint8_t)( sht_val.SHT_30_Humidity_L& 0xFF);
+    }
+    else    
+    {
+      APP_LOG(TS_ON, VLEVEL_L, "sht not connect\r\n" );
+      AppData.Buffer[i++] = (uint8_t)( 0xff & 0xFF);
+      AppData.Buffer[i++] = (uint8_t)( 0xff & 0xFF);
+    }
+
+    
   }
 
   AppData.BufferSize = i;
