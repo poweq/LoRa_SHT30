@@ -1,0 +1,2 @@
+# LoRa_SHT30
+CMWX1ZZABZ-078 모듈과 SHT-30 조합 
