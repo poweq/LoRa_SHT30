@@ -27,7 +27,7 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
-#include "sht3x.h"
+//#include "sht3x.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -45,10 +45,7 @@ typedef struct
   int16_t altitudeBar ;   /*!< in m * 10 */
   /**more may be added*/
   /* USER CODE BEGIN sensor_t */
-  float SHT_30_Temperature_H;
-  float SHT_30_Temperature_L;
-  float SHT_30_Humidity_H; 
-  float SHT_30_Humidity_L; 
+
   /* USER CODE END sensor_t */
 } sensor_t;
 

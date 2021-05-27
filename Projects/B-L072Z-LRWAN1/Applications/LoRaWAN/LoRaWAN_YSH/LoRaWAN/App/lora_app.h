@@ -94,7 +94,7 @@ extern "C" {
  */
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-#define APP_TX_DUTYCYCLE                            20000
+#define APP_TX_DUTYCYCLE                            30000
 /*!
  * LoRaWAN User application port
  * @note do not use 224. It is reserved for certification

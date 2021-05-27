@@ -24,7 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 //#include "DS18B20.h"
-//#include "i2c.h"
+#include "sht3x"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,8 +53,9 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-TIM_HandleTypeDef htim2;
-UART_HandleTypeDef huart2;
+extern TIM_HandleTypeDef htim2;
+extern UART_HandleTypeDef huart2;
+extern I2C_HandleTypeDef hi2c1;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/

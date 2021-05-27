@@ -274,7 +274,7 @@ bool LoRa_sht3x_read_temperature_and_humidity(sht3x_handle_t *handle,sht3x_value
 
 	float temperature = -45.0f + 175.0f * (float)temperature_raw / 65535.0f;
 	float humidity = 100.0f * (float)humidity_raw / 65535.0f;
-	APP_LOG(TS_ON, VLEVEL_L, "sht_temp= %d\n\r",(uint8_t) temperature );
+	//APP_LOG(TS_ON, VLEVEL_L, "sht_temp= %d\n\r",(uint8_t) temperature );
 	
 	}
 	
