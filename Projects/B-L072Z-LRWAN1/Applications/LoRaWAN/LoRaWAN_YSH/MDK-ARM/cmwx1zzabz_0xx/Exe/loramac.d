@@ -1,0 +1,45 @@
+cmwx1zzabz_0xx/exe/loramac.o: \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.c \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\utilities.h \
+  ..\Core\Inc\utilities_conf.h \
+  ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  ..\..\..\..\..\..\Utilities\misc\stm32_mem.h \
+  ..\..\..\..\..\..\Utilities\misc\stm32_tiny_vsnprintf.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\Region.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.h \
+  ..\LoRaWAN\Target\timer.h \
+  ..\..\..\..\..\..\Utilities\timer\stm32_timer.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ..\LoRaWAN\Target\systime.h \
+  ..\..\..\..\..\..\Utilities\misc\stm32_systime.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\time.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\SubGHz_Phy\radio.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacTypes.h \
+  ..\LoRaWAN\Target\lorawan_conf.h ..\Core\Inc\sys_app.h \
+  ..\Core\Inc\sys_conf.h \
+  ..\..\..\..\..\..\Utilities\trace\adv_trace\stm32_adv_trace.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCommon.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacTypes.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacHeaderTypes.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\Region.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassB.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCrypto.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacMessageTypes.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacHeaderTypes.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\secure-element.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacTest.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacConfirmQueue.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacParser.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCommands.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacAdr.h \
+  ..\..\..\..\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacSerializer.h \
+  ..\LoRaWAN\Target\mw_log_conf.h
